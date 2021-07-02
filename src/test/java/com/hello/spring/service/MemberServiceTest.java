@@ -1,7 +1,7 @@
 package com.hello.spring.service;
 
 import com.hello.spring.domain.Member;
-import com.hello.spring.repository.MemoryMemberRepository;
+//import com.hello.spring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,13 +11,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MemberServiceTest {
 
     MemberService memberService;
-    MemoryMemberRepository memberRepository;
+//    MemoryMemberRepository memberRepository;
 
     @BeforeEach
     public void beforeEach() {
         // 같은 MemoryMemberRepository를 사용할 수 있도록 외부에서 넣어준다. = DI
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
+//        memberRepository = new MemoryMemberRepository();
+//        memberService = new MemberService(memberRepository);
     }
     @Test
     void 회원가입() {

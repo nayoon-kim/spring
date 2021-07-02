@@ -2,9 +2,10 @@ package com.hello.spring.service;
 
 import com.hello.spring.domain.Member;
 import com.hello.spring.repository.MemberRepository;
-import com.hello.spring.repository.MemoryMemberRepository;
+//import com.hello.spring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +13,7 @@ import java.util.Optional;
 /**
  * 서비스의 경우 비즈니스에 가깝게 네이밍을 해야한다.
  */
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
